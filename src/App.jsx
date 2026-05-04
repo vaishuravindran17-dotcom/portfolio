@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import { useTheme } from './context/ThemeContext'
 import Cursor from './components/Cursor'
 import Nav from './components/Nav'
 import Toggle from './components/Toggle'
@@ -8,6 +9,8 @@ import Home from './pages/Home'
 import ProjectPage from './pages/ProjectPage'
 
 export default function App() {
+  const { isFeeling } = useTheme()
+
   return (
     <>
       <Cursor />
@@ -15,6 +18,7 @@ export default function App() {
       <Toggle />
       <ReadingProgress />
       <ScrollToast />
+      {!isFeeling && <div className="thinking-grid" aria-hidden="true" />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work/:slug" element={<ProjectPage />} />

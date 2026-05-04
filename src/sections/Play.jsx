@@ -5,6 +5,7 @@ export default function Play() {
 
   return (
     <section
+      id="play"
       className="section"
       data-zone="play"
       data-zone-label="plays this"

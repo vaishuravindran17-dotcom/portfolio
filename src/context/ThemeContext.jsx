@@ -3,7 +3,7 @@ import { createContext, useContext, useState, useEffect } from 'react'
 const ThemeContext = createContext()
 
 export function ThemeProvider({ children }) {
-  const [mode, setMode] = useState('feeling')
+  const [mode, setMode] = useState('thinking')
 
   useEffect(() => {
     document.body.className = `theme-${mode}`
