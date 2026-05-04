@@ -7,6 +7,7 @@ import ReadingProgress from './components/ReadingProgress'
 import ScrollToast from './components/ScrollToast'
 import Home from './pages/Home'
 import ProjectPage from './pages/ProjectPage'
+import PlayPage from './pages/PlayPage'
 
 export default function App() {
   const { isFeeling } = useTheme()
@@ -20,8 +21,9 @@ export default function App() {
       <ScrollToast />
       {!isFeeling && <div className="thinking-grid" aria-hidden="true" />}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/work/:slug" element={<ProjectPage />} />
+        <Route path="/"            element={<Home />} />
+        <Route path="/work/:slug"  element={<ProjectPage />} />
+        <Route path="/play"        element={<PlayPage />} />
       </Routes>
     </>
   )

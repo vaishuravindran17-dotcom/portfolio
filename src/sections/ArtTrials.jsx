@@ -1,12 +1,11 @@
+import { Link } from 'react-router-dom'
 import { useTheme } from '../context/ThemeContext'
 
-const placeholders = [
+const pieces = [
   { date: 'Jan 2024', caption: 'Something I kept coming back to.' },
   { date: 'Mar 2024', caption: 'Made in an afternoon. Not finished.' },
   { date: 'Jun 2024', caption: 'An experiment with colour I didn\'t expect.' },
   { date: 'Aug 2024', caption: 'Observation from a long walk.' },
-  { date: 'Oct 2024', caption: 'Still not sure what this is.' },
-  { date: 'Dec 2024', caption: 'The beginning of something.' },
 ]
 
 export default function ArtTrials() {
@@ -19,9 +18,9 @@ export default function ArtTrials() {
       data-zone-label="look"
     >
       <div className="container">
-        <span className="section-label">art trials</span>
+        <span className="section-label">play</span>
 
-        <div style={{ marginBottom: 28 }} className="mode-wrapper">
+        <div style={{ marginBottom: 24 }} className="mode-wrapper">
           <p
             className={`mode-block ${isFeeling ? 'mode-visible' : 'mode-hidden'}`}
             style={{ fontSize: 15, lineHeight: 1.75 }}
@@ -38,7 +37,7 @@ export default function ArtTrials() {
         </div>
 
         <div className="art-grid">
-          {placeholders.map((item, i) => (
+          {pieces.map((item, i) => (
             <div key={i} className="art-item" data-cursor-label="look">
               <div className="art-placeholder" />
               <div className="art-meta">
@@ -48,6 +47,10 @@ export default function ArtTrials() {
             </div>
           ))}
         </div>
+
+        <Link to="/play" className="art-cta" data-cursor-label="look">
+          see all &rarr;
+        </Link>
       </div>
     </section>
   )

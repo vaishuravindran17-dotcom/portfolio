@@ -3,10 +3,10 @@ import Who from '../sections/Who'
 import Experience from '../sections/Experience'
 import Work from '../sections/Work'
 import Play from '../sections/Play'
-import ArtTrials from '../sections/ArtTrials'
 import VibeCoded from '../sections/VibeCoded'
-import ThingsINotice from '../sections/ThingsINotice'
+import ArtTrials from '../sections/ArtTrials'
 import Writing from '../sections/Writing'
+import ThingsINotice from '../sections/ThingsINotice'
 import Footer from '../components/Footer'
 
 export default function Home() {
@@ -17,10 +17,10 @@ export default function Home() {
       <Experience />
       <Work />
       <Play />
-      <ArtTrials />
       <VibeCoded />
-      <ThingsINotice />
+      <ArtTrials />
       <Writing />
+      <ThingsINotice />
       <Footer />
     </main>
   )

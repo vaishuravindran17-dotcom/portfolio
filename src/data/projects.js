@@ -2,6 +2,7 @@ export const projects = [
   {
     slug: 'carboledger',
     title: 'Carboledger',
+    role: 'Product Designer',
     year: '2024–Present',
     tags: ['Climate Tech', 'B2B', 'Enterprise'],
     feeling: {
@@ -26,6 +27,7 @@ export const projects = [
   {
     slug: 'spiti',
     title: 'Spiti',
+    role: 'Product Designer',
     year: '2022–2023',
     tags: ['Async Video', 'B2B', 'Design System'],
     feeling: {
@@ -50,6 +52,7 @@ export const projects = [
   {
     slug: 'roado',
     title: 'Roado',
+    role: 'UI/UX Designer',
     year: '2021–2022',
     tags: ['Fleet Management', 'B2B', 'Mobile'],
     feeling: {

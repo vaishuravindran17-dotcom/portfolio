@@ -1,22 +1,18 @@
 import { useTheme } from '../context/ThemeContext'
 
 const links = [
-  { label: 'Resume', href: '#', attrs: { target: '_blank', rel: 'noopener noreferrer' } },
-  { label: 'Email', href: 'mailto:hello@vaishaliravindran.com' },
-  { label: 'LinkedIn', href: '#', attrs: { target: '_blank', rel: 'noopener noreferrer' } },
-  { label: 'Behance', href: '#', attrs: { target: '_blank', rel: 'noopener noreferrer' } },
-  { label: 'X', href: '#', attrs: { target: '_blank', rel: 'noopener noreferrer' } },
+  { label: 'Resume',   href: '#',                                                              attrs: { target: '_blank', rel: 'noopener noreferrer' } },
+  { label: 'Email',    href: 'mailto:hello@vaishaliravindran.com' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/vaishali-ravindran-6295b520a/',      attrs: { target: '_blank', rel: 'noopener noreferrer' } },
+  { label: 'Behance',  href: 'https://www.behance.net/vaishalravindr1/projects',               attrs: { target: '_blank', rel: 'noopener noreferrer' } },
+  { label: 'Medium',   href: 'https://medium.com/@vaishuravindran17',                          attrs: { target: '_blank', rel: 'noopener noreferrer' } },
 ]
 
 export default function Footer() {
   const { isFeeling } = useTheme()
 
   return (
-    <footer
-      className="footer section"
-      data-zone="footer"
-      data-cursor-label="say hi"
-    >
+    <footer className="footer section" data-zone="footer" data-cursor-label="say hi">
       <div className="container">
         <div className="mode-wrapper">
           <div className={`mode-block ${isFeeling ? 'mode-visible' : 'mode-hidden'}`}>

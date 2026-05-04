@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
 import { useTheme } from '../context/ThemeContext'
 
-const getChennaTime = () => {
-  return new Date().toLocaleTimeString('en-IN', {
+const getChennaTime = () =>
+  new Date().toLocaleTimeString('en-IN', {
     timeZone: 'Asia/Kolkata',
     hour: '2-digit',
     minute: '2-digit',
     hour12: true,
   })
-}
 
 export default function Who() {
   const { isFeeling } = useTheme()
@@ -45,11 +44,14 @@ export default function Who() {
 
           <div className={`mode-block ${!isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
             <p className="who-body">
-              Product designer, 6 years. Specialised in B2B and enterprise SaaS across
-              climate tech, fleet management, and async collaboration tools. I work across
-              the full product lifecycle &mdash; research, strategy, design, testing, and roadmap.
-              I&rsquo;ve taken a product from zero to $100k in pilots and production launches.
-              Currently at Carboledger, Chennai.
+              Product designer, 6 years. Specialised in{' '}
+              <mark className="hl">B2B and enterprise SaaS</mark>{' '}
+              across climate tech, fleet management, and async collaboration tools.
+              I work across the full product lifecycle &mdash; research, strategy, design,
+              testing, and roadmap. I&rsquo;ve taken a product from{' '}
+              <mark className="hl">zero to $100k</mark>{' '}
+              in pilots and production launches. Currently at{' '}
+              <mark className="hl">Carboledger</mark>.
             </p>
           </div>
         </div>

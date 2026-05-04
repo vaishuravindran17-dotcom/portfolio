@@ -19,14 +19,9 @@ export default function Nav() {
 
         {!isProject && (
           <ul className="nav-links">
-            <li><a href="#work" data-cursor-label="go">work</a></li>
-            <li><a href="#play" data-cursor-label="go">play</a></li>
+            <li><a href="#work"    data-cursor-label="go">work</a></li>
+            <li><a href="#play"    data-cursor-label="go">play</a></li>
             <li><a href="#writing" data-cursor-label="go">writing</a></li>
-            <li>
-              <a href="mailto:hello@vaishaliravindran.com" data-cursor-label="say hi">
-                say hi
-              </a>
-            </li>
           </ul>
         )}
       </div>
