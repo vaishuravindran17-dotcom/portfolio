@@ -764,6 +764,23 @@ body.theme-thinking .exp-header { margin-bottom: 6px; }
 
 .art-preview-item:hover { transform: rotate(0deg) scale(1.02); z-index: 1; position: relative; }
 
+.art-preview-sub {
+  font-size: 13px;
+  color: var(--label);
+  line-height: 1.7;
+  margin-bottom: 28px;
+  transition: color var(--t);
+}
+
+.art-preview-caption {
+  font-size: 11px;
+  color: var(--label);
+  font-style: italic;
+  margin-top: 7px;
+  line-height: 1.5;
+  transition: color var(--t);
+}
+
 .art-cta {
   display: inline-block;
   margin-top: 22px;

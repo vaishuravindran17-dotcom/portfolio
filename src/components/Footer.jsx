@@ -30,7 +30,7 @@ export default function Footer() {
 
         {!isFeeling && (
           <p className="footer-note">
-            Made late at night in Chennai. [Song on repeat this month]. Forgot to drink anything again.
+            Made late at night in Chennai. Listening to Merku Karaiyil on loop this month. Forgot to drink water again.
           </p>
         )}
       </div>
