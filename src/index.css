@@ -727,26 +727,35 @@ body.theme-thinking .exp-header { margin-bottom: 6px; }
   transition: color var(--t);
 }
 
-/* ── Art / Play section ── */
-.art-grid { columns: 2; column-gap: 14px; }
-.art-item { break-inside: avoid; margin-bottom: 14px; }
-
-.art-placeholder {
-  width: 100%;
-  background: var(--surface);
-  border: 0.5px solid color-mix(in srgb, var(--secondary) 25%, transparent);
-  border-radius: 3px;
-  aspect-ratio: 4/3;
-  transition: background var(--t), opacity 200ms ease;
+/* ── Art Trials home preview ── */
+.art-preview {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 32px 0 24px;
+  overflow: visible;
 }
 
-.art-item:nth-child(odd) .art-placeholder { aspect-ratio: 3/4; }
-.art-item:nth-child(3n)  .art-placeholder { aspect-ratio: 1;   }
-.art-placeholder:hover                    { opacity: 0.8; }
+.art-preview-item {
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 2px;
+  border: 0.5px solid color-mix(in srgb, var(--secondary) 28%, transparent);
+  transition: transform 300ms ease;
+}
 
-.art-meta    { margin-top: 7px; }
-.art-date    { font-size: 10px; color: var(--label); display: block; transition: color var(--t); }
-.art-caption { font-size: 10px; font-style: italic; color: var(--text); opacity: 0.6; margin-top: 2px; line-height: 1.5; }
+.art-preview-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.art-preview-item--1 { flex: 1.3; transform: rotate(-1.2deg) translateY(10px); }
+.art-preview-item--2 { flex: 1;   transform: rotate(0.8deg)  translateY(-6px); }
+.art-preview-item--3 { flex: 1.2; transform: rotate(-0.4deg) translateY(18px); }
+.art-preview-item--4 { flex: 0.9; transform: rotate(1.2deg)  translateY(-2px); }
+
+.art-preview-item:hover { transform: rotate(0deg) translateY(0px) scale(1.02); z-index: 1; }
 
 .art-cta {
   display: inline-block;
@@ -758,6 +767,71 @@ body.theme-thinking .exp-header { margin-bottom: 6px; }
 }
 
 .art-cta:hover { opacity: 0.72; color: var(--accent); }
+
+/* ── Play full page ── */
+.play-page { padding-top: 80px; padding-bottom: 0; }
+
+.play-heading {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(34px, 6vw, 52px);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text);
+  margin: 28px 0 14px;
+  transition: color var(--t);
+}
+
+.play-sub {
+  font-size: 13px;
+  color: var(--label);
+  line-height: 1.7;
+  margin-bottom: 80px;
+  transition: color var(--t);
+}
+
+.play-section { margin-bottom: 96px; }
+
+.play-section-label {
+  font-family: 'Caveat', cursive;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 40px;
+  transition: color var(--t);
+}
+
+.play-scatter { position: relative; }
+
+.play-piece {
+  display: block;
+  margin-bottom: 52px;
+  transition: transform 250ms ease;
+}
+
+.play-piece:hover { z-index: 1; position: relative; }
+
+.play-piece-img {
+  overflow: hidden;
+  border-radius: 2px;
+  border: 0.5px solid color-mix(in srgb, var(--secondary) 28%, transparent);
+}
+
+.play-piece-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 400ms ease;
+}
+
+.play-piece:hover .play-piece-img img { transform: scale(1.02); }
+
+.play-piece-caption {
+  font-size: 12px;
+  color: var(--label);
+  margin-top: 9px;
+  line-height: 1.5;
+  transition: color var(--t);
+}
 
 /* ── Writing ── */
 .writing-body { font-size: 15px; line-height: 1.8; margin-bottom: 22px; }
@@ -982,12 +1056,24 @@ body.theme-thinking .exp-header { margin-bottom: 6px; }
   .section         { padding: 52px 0; }
   .opening-section { padding: 100px 0 36px; }
   .toggle-wrap     { top: 12px; left: auto; right: 16px; transform: none; }
-  .art-grid        { columns: 1; }
   .activity-row    { grid-template-columns: 70px 1fr; gap: 12px; }
   .work-card::before { left: -16px; }
   .thinking-grid   { display: none; }
   .scroll-toast    { display: none; }
   body.theme-thinking .section::after { display: none; }
+
+  /* Art preview: 2×2 stacked on mobile */
+  .art-preview { flex-wrap: wrap; gap: 8px; }
+  .art-preview-item--1,
+  .art-preview-item--2,
+  .art-preview-item--3,
+  .art-preview-item--4 { flex: 0 0 calc(50% - 4px); transform: none; }
+  .art-preview-item:hover { transform: none; }
+
+  /* Play page: full width pieces, no rotation */
+  .play-heading  { font-size: 28px; }
+  .play-piece    { width: 100% !important; margin-left: 0 !important; transform: none !important; }
+  .play-piece:hover .play-piece-img img { transform: none; }
 }
 
 @media (max-width: 500px) {

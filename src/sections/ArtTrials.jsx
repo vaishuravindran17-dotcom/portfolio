@@ -1,49 +1,22 @@
 import { Link } from 'react-router-dom'
-import { useTheme } from '../context/ThemeContext'
 
-const pieces = [
-  { date: 'Jan 2024', caption: 'Something I kept coming back to.' },
-  { date: 'Mar 2024', caption: 'Made in an afternoon. Not finished.' },
-  { date: 'Jun 2024', caption: 'An experiment with colour I didn\'t expect.' },
-  { date: 'Aug 2024', caption: 'Observation from a long walk.' },
+const previews = [
+  { src: '/play/design-01-card-deck.jpg',    alt: 'Playing card deck'         },
+  { src: '/play/illus-01-house-sunset.jpg',  alt: 'House at sunset'           },
+  { src: '/play/paint-04-ocean-waves.jpg',   alt: 'Ocean waves'               },
+  { src: '/play/mini-04-girl-balloons.jpg',  alt: 'Girl with balloons'        },
 ]
 
 export default function ArtTrials() {
-  const { isFeeling } = useTheme()
-
   return (
-    <section
-      className="section"
-      data-zone="art-trials"
-      data-zone-label="look"
-    >
+    <section className="section" data-zone="art-trials" id="play">
       <div className="container">
-        <span className="section-label" data-design-spec={"element: section-label\nfont: DM Sans · 500\nsize: 10px\ntracking: 0.24em\ntransform: uppercase\ncolor: --label"}>play</span>
+        <span className="section-label">play</span>
 
-        <div style={{ marginBottom: 24 }} className="mode-wrapper">
-          <p
-            className={`mode-block ${isFeeling ? 'mode-visible' : 'mode-hidden'}`}
-            style={{ fontSize: 15, lineHeight: 1.75 }}
-          >
-            Things I made with no brief and no client. Adding as I go. Some finished, most not.
-          </p>
-          <p
-            className={`mode-block ${!isFeeling ? 'mode-visible' : 'mode-hidden'}`}
-            style={{ fontSize: 15, lineHeight: 1.75 }}
-          >
-            A running collection of visual work outside of product design &mdash; drawings, paintings,
-            digital experiments. Dated. No titles.
-          </p>
-        </div>
-
-        <div className="art-grid">
-          {pieces.map((item, i) => (
-            <div key={i} className="art-item" data-cursor-label="look">
-              <div className="art-placeholder" />
-              <div className="art-meta">
-                <span className="art-date" data-design-spec={"element: date\nfont: DM Sans · regular\nsize: 10px\ncolor: --label"}>{item.date}</span>
-                <p className="art-caption" data-design-spec={"element: caption\nfont: DM Sans · italic\nsize: 11px\nline-height: 1.5\nopacity: 60%"}>{item.caption}</p>
-              </div>
+        <div className="art-preview">
+          {previews.map((p, i) => (
+            <div key={i} className={`art-preview-item art-preview-item--${i + 1}`} data-cursor-label="look">
+              <img src={p.src} alt={p.alt} loading="lazy" />
             </div>
           ))}
         </div>
