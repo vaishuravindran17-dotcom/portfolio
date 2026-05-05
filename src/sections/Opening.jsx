@@ -8,6 +8,9 @@ const getGreeting = () => {
   return "It's late. This is when I do my best work too."
 }
 
+const QUOTE_SPEC = "element: opening-quote\nfont: DM Serif Display · italic\nsize: clamp(15–22px)\ntracking: -0.01em\nline-height: 1.3"
+const LABEL_SPEC = "element: section-label\nfont: DM Sans · 500\nsize: 10px\ntracking: 0.24em\ntransform: uppercase\ncolor: --label"
+
 export default function Opening() {
   const [greeting, setGreeting] = useState(getGreeting)
 
@@ -22,7 +25,10 @@ export default function Opening() {
         {/* swap the div for <img src="/vaishali.jpg" alt="Vaishali" /> when the photo is ready */}
         <div className="opening-avatar" aria-hidden="true" />
 
-        <p className="opening-quote">
+        <p
+          className="opening-quote"
+          data-design-spec={QUOTE_SPEC}
+        >
           &ldquo;We will never be able to become the user. So I just try to stay close.&rdquo;
         </p>
 

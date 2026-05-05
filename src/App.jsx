@@ -6,6 +6,7 @@ import Toggle from './components/Toggle'
 import ReadingProgress from './components/ReadingProgress'
 import ScrollToast from './components/ScrollToast'
 import ThinkingAnnotations from './components/ThinkingAnnotations'
+import DesignSpecTooltip from './components/DesignSpecTooltip'
 import Home from './pages/Home'
 import ProjectPage from './pages/ProjectPage'
 import PlayPage from './pages/PlayPage'
@@ -22,6 +23,7 @@ export default function App() {
       <ScrollToast />
       {!isFeeling && <div className="thinking-grid" aria-hidden="true" />}
       {!isFeeling && <ThinkingAnnotations />}
+      {!isFeeling && <DesignSpecTooltip />}
       <Routes>
         <Route path="/"            element={<Home />} />
         <Route path="/work/:slug"  element={<ProjectPage />} />

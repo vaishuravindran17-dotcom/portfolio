@@ -25,13 +25,13 @@ export default function ThingsINotice() {
       data-zone-label="this is me"
     >
       <div className="container">
-        <span className="section-label">things I notice</span>
+        <span className="section-label" data-design-spec={"element: section-label\nfont: DM Sans · 500\nsize: 10px\ntracking: 0.24em\ntransform: uppercase\ncolor: --label"}>things I notice</span>
 
         <div className="notice-list">
           {observations.map((obs, i) => (
             <div key={i} className="notice-item">
-              <p className="notice-body">{obs.body}</p>
-              <span className="notice-location">— {obs.location}</span>
+              <p className="notice-body" data-design-spec={"element: observation\nfont: DM Sans · regular\nsize: 15px\nline-height: 1.8\ncolor: --text"}>{obs.body}</p>
+              <span className="notice-location" data-design-spec={"element: location\nfont: DM Sans · regular\nsize: 10px\ntracking: 0.05em\ncolor: --label"}>— {obs.location}</span>
             </div>
           ))}
         </div>

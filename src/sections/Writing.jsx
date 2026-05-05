@@ -38,7 +38,7 @@ export default function Writing() {
       data-zone-label="read"
     >
       <div className="container">
-        <span className="section-label">writing</span>
+        <span className="section-label" data-design-spec={"element: section-label\nfont: DM Sans · 500\nsize: 10px\ntracking: 0.24em\ntransform: uppercase\ncolor: --label"}>writing</span>
 
         <div className="mode-wrapper" style={{ marginBottom: 24 }}>
           <p className={`mode-block writing-body ${isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
@@ -64,9 +64,9 @@ export default function Writing() {
             >
               <div className="essay-thumb" aria-hidden="true" />
               <div className="essay-body">
-                <p className="essay-title">{e.title}</p>
-                <p className="essay-subtitle">{e.subtitle}</p>
-                <span className="essay-date">{e.date}</span>
+                <p className="essay-title" data-design-spec={"element: essay-title\nfont: DM Sans · 500\nsize: 14px\nline-height: 1.4\ncolor: --text"}>{e.title}</p>
+                <p className="essay-subtitle" data-design-spec={"element: subtitle\nfont: DM Sans · regular\nsize: 11px\nline-height: 1.55\ncolor: --secondary"}>{e.subtitle}</p>
+                <span className="essay-date" data-design-spec={"element: date\nfont: DM Sans · regular\nsize: 10px\ntracking: 0.04em\ncolor: --label"}>{e.date}</span>
               </div>
             </a>
           ))}

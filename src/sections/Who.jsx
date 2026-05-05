@@ -9,6 +9,9 @@ const getChennaTime = () =>
     hour12: true,
   })
 
+const LABEL_SPEC = "element: section-label\nfont: DM Sans · 500\nsize: 10px\ntracking: 0.24em\ntransform: uppercase\ncolor: --label"
+const BODY_SPEC  = "element: body-copy\nfont: DM Sans · regular\nsize: 15px\nline-height: 1.8\ncolor: --text"
+
 export default function Who() {
   const { isFeeling } = useTheme()
   const [time, setTime] = useState(getChennaTime)
@@ -27,23 +30,23 @@ export default function Who() {
       data-cursor-label="this is me"
     >
       <div className="container">
-        <span className="section-label">who</span>
+        <span className="section-label" data-design-spec={LABEL_SPEC}>who</span>
 
         <div className="mode-wrapper">
           <div className={`mode-block ${isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
-            <p className="who-body">
+            <p className="who-body" data-design-spec={BODY_SPEC}>
               I&rsquo;m Vaishali &mdash; a product designer based in Chennai. I chose B2B on purpose,
               because the puzzles are harder and the answers are never obvious. I&rsquo;ll spend
               hours just understanding what a product does, who&rsquo;s stuck inside it and why,
               before I touch a single frame.
             </p>
-            <p className="who-body">
+            <p className="who-body" data-design-spec={BODY_SPEC}>
               I don&rsquo;t think complexity is the enemy. I think it&rsquo;s the material.
             </p>
           </div>
 
           <div className={`mode-block ${!isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
-            <p className="who-body">
+            <p className="who-body" data-design-spec={BODY_SPEC}>
               Product designer, 6 years. Specialised in{' '}
               <mark className="hl">B2B and enterprise SaaS</mark>{' '}
               across climate tech, fleet management, and async collaboration tools.

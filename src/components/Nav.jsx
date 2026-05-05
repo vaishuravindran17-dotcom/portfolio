@@ -14,7 +14,7 @@ export default function Nav() {
     >
       <div className="nav-inner">
         <Link to="/" className="nav-name" data-cursor-label="go">
-          Vaishali Ravindran
+          Vaishali.P
         </Link>
 
         {!isProject && (

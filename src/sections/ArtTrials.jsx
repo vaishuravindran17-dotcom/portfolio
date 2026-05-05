@@ -18,7 +18,7 @@ export default function ArtTrials() {
       data-zone-label="look"
     >
       <div className="container">
-        <span className="section-label">play</span>
+        <span className="section-label" data-design-spec={"element: section-label\nfont: DM Sans · 500\nsize: 10px\ntracking: 0.24em\ntransform: uppercase\ncolor: --label"}>play</span>
 
         <div style={{ marginBottom: 24 }} className="mode-wrapper">
           <p
@@ -41,8 +41,8 @@ export default function ArtTrials() {
             <div key={i} className="art-item" data-cursor-label="look">
               <div className="art-placeholder" />
               <div className="art-meta">
-                <span className="art-date">{item.date}</span>
-                <p className="art-caption">{item.caption}</p>
+                <span className="art-date" data-design-spec={"element: date\nfont: DM Sans · regular\nsize: 10px\ncolor: --label"}>{item.date}</span>
+                <p className="art-caption" data-design-spec={"element: caption\nfont: DM Sans · italic\nsize: 11px\nline-height: 1.5\nopacity: 60%"}>{item.caption}</p>
               </div>
             </div>
           ))}

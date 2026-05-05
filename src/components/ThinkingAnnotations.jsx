@@ -19,7 +19,7 @@ export default function ThinkingAnnotations() {
       </div>
       <div className="annot-block">
         <span className="annot-key">section pad</span>
-        <span className="annot-val">88px ↕</span>
+        <span className="annot-val">68px ↕</span>
       </div>
       <div className="annot-block">
         <span className="annot-key">container</span>

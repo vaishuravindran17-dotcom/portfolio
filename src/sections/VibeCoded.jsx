@@ -10,6 +10,11 @@ const vibeProjects = [
   },
 ]
 
+const LABEL_SPEC = "element: section-label\nfont: DM Sans · 500\nsize: 10px\ntracking: 0.24em\ntransform: uppercase\ncolor: --label"
+const NAME_SPEC  = "element: project-name\nfont: DM Serif Display · 400\nsize: 17px\ncolor: --text"
+const WHAT_SPEC  = "element: description\nfont: DM Sans · regular\nsize: 13px\nline-height: 1.6\ncolor: --text"
+const WHY_SPEC   = "element: rationale\nfont: DM Sans · italic\nsize: 11px\ncolor: --label"
+
 export default function VibeCoded() {
   const { isFeeling } = useTheme()
 
@@ -20,7 +25,7 @@ export default function VibeCoded() {
       data-zone-label="built this"
     >
       <div className="container">
-        <span className="section-label">built at odd hours</span>
+        <span className="section-label" data-design-spec={LABEL_SPEC}>built at odd hours</span>
 
         <div style={{ marginBottom: 24 }} className="mode-wrapper">
           <p className={`mode-block ${isFeeling ? 'mode-visible' : 'mode-hidden'}`}
@@ -40,9 +45,9 @@ export default function VibeCoded() {
                 {/* Deduce thumbnail — replace div with <img src="..." alt="Deduce" /> */}
                 <div className="vibe-thumb" aria-hidden="true" />
                 <div className="vibe-content">
-                  <p className="vibe-name">{p.name}</p>
-                  <p className="vibe-what">{p.what}</p>
-                  <p className="vibe-why">{p.why}</p>
+                  <p className="vibe-name" data-design-spec={NAME_SPEC}>{p.name}</p>
+                  <p className="vibe-what" data-design-spec={WHAT_SPEC}>{p.what}</p>
+                  <p className="vibe-why" data-design-spec={WHY_SPEC}>{p.why}</p>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
                     <span className="vibe-status">{p.status}</span>
                     {p.link && (

@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 import { projects } from '../data/projects'
 
+const LABEL_SPEC = "element: section-label\nfont: DM Sans · 500\nsize: 10px\ntracking: 0.24em\ntransform: uppercase\ncolor: --label"
+const TITLE_SPEC = "element: card-title\nfont: DM Serif Display · 400\nsize: 20px\nline-height: 1.3\ncolor: --text"
+const META_SPEC  = "element: card-meta\nfont: DM Sans · regular\nsize: 11px\ntracking: 0.02em\ncolor: --label"
+
 export default function Work() {
   return (
     <section
@@ -10,7 +14,7 @@ export default function Work() {
       data-zone-label="read"
     >
       <div className="container">
-        <span className="section-label">work</span>
+        <span className="section-label" data-design-spec={LABEL_SPEC}>work</span>
 
         <div className="work-list">
           {projects.map((p) => (
@@ -22,8 +26,8 @@ export default function Work() {
             >
               <div className="work-card-image" aria-hidden="true" />
               <div className="work-card-inner">
-                <p className="work-card-title">{p.title}</p>
-                <p className="work-card-meta">{p.role} &middot; {p.year}</p>
+                <p className="work-card-title" data-design-spec={TITLE_SPEC}>{p.title}</p>
+                <p className="work-card-meta" data-design-spec={META_SPEC}>{p.role} &middot; {p.year}</p>
               </div>
             </Link>
           ))}
