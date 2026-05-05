@@ -836,7 +836,6 @@ body.theme-thinking .exp-header { margin-bottom: 6px; }
 .play-piece-img {
   overflow: hidden;
   border-radius: 2px;
-  border: 0.5px solid color-mix(in srgb, var(--secondary) 28%, transparent);
 }
 
 .play-piece-img img {
