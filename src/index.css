@@ -747,7 +747,6 @@ body.theme-thinking .exp-header { margin-bottom: 6px; }
 .art-preview-item {
   overflow: hidden;
   border-radius: 2px;
-  border: 0.5px solid color-mix(in srgb, var(--secondary) 28%, transparent);
   transition: transform 300ms ease;
 }
 
