@@ -19,6 +19,9 @@ export default function Opening() {
   return (
     <section className="section opening-section" data-zone="opening">
       <div className="container">
+        {/* swap the div for <img src="/vaishali.jpg" alt="Vaishali" /> when the photo is ready */}
+        <div className="opening-avatar" aria-hidden="true" />
+
         <p className="opening-quote">
           &ldquo;We will never be able to become the user. So I just try to stay close.&rdquo;
         </p>

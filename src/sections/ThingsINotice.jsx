@@ -8,16 +8,12 @@ const observations = [
     location: 'Pondy Bazaar, Chennai',
   },
   {
-    body: "Chennai's bus stops run on unspoken rules nobody wrote down. Where to stand, when to move, who goes first. Everyone just knows. I've never seen it fail.",
-    location: 'Chennai, ongoing',
+    body: "I like to see how the clouds move. Not as a metaphor for anything. Just the actual clouds, actually moving. It's one of my favourite things to do.",
+    location: 'anywhere with sky',
   },
   {
-    body: 'Watching user session recordings at Carboledger. The way someone moves through a flow you designed — hesitating where you expected confidence, breezing past what you thought was hard — reminds you every time. We will never become the user no matter how much we try.',
-    location: 'Carboledger, 2024',
-  },
-  {
-    body: "A student at Collej asked me a question I couldn't answer cleanly. I've been thinking about it since. Good questions do that.",
-    location: 'Collej, 2023',
+    body: "The first thing I notice walking into any café or restaurant is the logo and the collaterals. Whether the menu font matches the signage. Whether someone thought it through. I've visited places just for this.",
+    location: 'cafés across Chennai',
   },
 ]
 
