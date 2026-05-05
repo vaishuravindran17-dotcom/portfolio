@@ -40,8 +40,15 @@ export default function VibeCoded() {
 
         <div className="vibe-list">
           {vibeProjects.map((p) => (
-            <div key={p.name} className="vibe-item" data-cursor-label="built this">
-              <div className="vibe-item-inner">
+            <div key={p.name} className="vibe-item">
+              <a
+                className="vibe-item-inner"
+                href={p.link || undefined}
+                target={p.link ? '_blank' : undefined}
+                rel={p.link ? 'noopener noreferrer' : undefined}
+                data-cursor-label="visit"
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
                 <div className="vibe-thumb">
                   <img src="/deduce.jpg" alt="Deduce" />
                 </div>
@@ -49,22 +56,9 @@ export default function VibeCoded() {
                   <p className="vibe-name" data-design-spec={NAME_SPEC}>{p.name}</p>
                   <p className="vibe-what" data-design-spec={WHAT_SPEC}>{p.what}</p>
                   <p className="vibe-why" data-design-spec={WHY_SPEC}>{p.why}</p>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-                    <span className="vibe-status">{p.status}</span>
-                    {p.link && (
-                      <a
-                        href={p.link}
-                        style={{ fontSize: 12, color: 'var(--accent)' }}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        data-cursor-label="go"
-                      >
-                        visit &rarr;
-                      </a>
-                    )}
-                  </div>
+                  <span className="vibe-status">{p.status}</span>
                 </div>
-              </div>
+              </a>
             </div>
           ))}
         </div>
