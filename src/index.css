@@ -99,7 +99,7 @@ p { color: var(--text); transition: color var(--t); }
    design-spec annotation panel in the left margin.
    ──────────────────────────────────────────────────────── */
 body.theme-thinking .section {
-  padding: 68px 0;
+  padding: 28px 0;
   position: relative;
 }
 

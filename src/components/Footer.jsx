@@ -10,12 +10,7 @@ export default function Footer() {
   return (
     <footer className="footer section" data-zone="footer" data-cursor-label="say hi">
       <div className="container">
-        <p className="footer-name">Vaishali Ravindran &middot; Product Designer &middot; Chennai</p>
-        <p className="footer-tagline">
-          6 years in B2B and enterprise SaaS &middot; Open to the right problems
-        </p>
-
-        <div className="footer-links" style={{ marginTop: 28 }}>
+        <div className="footer-links" style={{ marginTop: 0 }}>
           {links.map(l => (
             <a
               key={l.label}
