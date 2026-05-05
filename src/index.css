@@ -857,12 +857,13 @@ body.theme-thinking .exp-header { margin-bottom: 6px; }
 .footer-link:hover{ color: var(--accent); }
 
 .footer-note {
-  font-size: 10px;
-  color: var(--secondary);
+  font-size: 11px;
+  color: var(--text);
   font-style: italic;
   line-height: 1.6;
-  margin-top: 4px;
-  transition: color var(--t);
+  margin-top: 8px;
+  opacity: 0.45;
+  transition: color var(--t), opacity var(--t);
 }
 
 /* ── Project page ── */
@@ -980,7 +981,7 @@ body.theme-thinking .exp-header { margin-bottom: 6px; }
   .container       { padding: 0 16px; }
   .section         { padding: 52px 0; }
   .opening-section { padding: 100px 0 36px; }
-  .toggle-wrap     { top: 12px; }
+  .toggle-wrap     { top: 12px; left: auto; right: 16px; transform: none; }
   .art-grid        { columns: 1; }
   .activity-row    { grid-template-columns: 70px 1fr; gap: 12px; }
   .work-card::before { left: -16px; }

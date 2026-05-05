@@ -1,3 +1,5 @@
+import { useTheme } from '../context/ThemeContext'
+
 const links = [
   { label: 'Resume',   href: '#',                                                              attrs: { target: '_blank', rel: 'noopener noreferrer' } },
   { label: 'Email',    href: 'mailto:hello@vaishaliravindran.com' },
@@ -7,6 +9,8 @@ const links = [
 ]
 
 export default function Footer() {
+  const { isFeeling } = useTheme()
+
   return (
     <footer className="footer section" data-zone="footer" data-cursor-label="say hi">
       <div className="container">
@@ -24,9 +28,11 @@ export default function Footer() {
           ))}
         </div>
 
-        <p className="footer-note">
-          Made late at night in Chennai. [Song on repeat this month]. Forgot to drink anything again.
-        </p>
+        {!isFeeling && (
+          <p className="footer-note">
+            Made late at night in Chennai. [Song on repeat this month]. Forgot to drink anything again.
+          </p>
+        )}
       </div>
     </footer>
   )
