@@ -1,26 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
-import { useTheme } from '../context/ThemeContext'
 
 const TAIL_COUNT = 5
 const TAIL_OPACITY = [0.55, 0.35, 0.2, 0.1, 0.05]
 const TAIL_SIZE   = [11, 9, 7, 5, 3]
 const MAIN_SIZE   = 14
 
-const ZONE_COLORS = {
-  who:              '#9E8E82',
-  work:             '#C4724A',
-  'art-trials':     '#7A9E7E',
-  'vibe-coded':     '#4A6FA5',
-  play:             '#D4A044',
-  'things-i-notice':'#555',
-  writing:          '#1F1A14',
-}
-
 export default function Cursor() {
-  const { isFeeling } = useTheme()
-  const isFeelingRef  = useRef(isFeeling)
-
-  useEffect(() => { isFeelingRef.current = isFeeling }, [isFeeling])
 
   const isMobile = useRef(
     typeof window !== 'undefined' &&
@@ -54,10 +39,7 @@ export default function Cursor() {
 
       const el = document.elementFromPoint(x, y)
       if (el) {
-        const zoneEl   = el.closest('[data-zone]')
-        color.current  = isFeelingRef.current
-          ? (ZONE_COLORS[zoneEl?.dataset.zone] || 'var(--accent)')
-          : 'var(--accent)'
+        color.current = 'var(--accent)'
 
         const labelEl  = el.closest('[data-cursor-label]')
         clearTimeout(labelTimeout.current)

@@ -1,5 +1,4 @@
 import Opening from '../sections/Opening'
-import Who from '../sections/Who'
 import Experience from '../sections/Experience'
 import Work from '../sections/Work'
 import VibeCoded from '../sections/VibeCoded'
@@ -13,7 +12,6 @@ export default function Home() {
   return (
     <main>
       <Opening />
-      <Who />
       <Experience />
       <Work />
       <VibeCoded />

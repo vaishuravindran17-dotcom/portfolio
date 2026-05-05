@@ -80,9 +80,9 @@ mark.hl {
 
 .section-label {
   display: block;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: lowercase;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: var(--label);
   margin-bottom: 22px;
   font-weight: 500;
@@ -101,13 +101,6 @@ p { color: var(--text); transition: color var(--t); }
 body.theme-thinking .section {
   padding: 28px 0;
   position: relative;
-}
-
-body.theme-thinking .section-label {
-  font-size: 10px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  margin-bottom: 36px;
 }
 
 /* Dashed bracket in left margin showing the 88px section padding */
@@ -459,7 +452,7 @@ body.theme-thinking .exp-header { margin-bottom: 6px; }
 .opening-greeting {
   font-size: 13px;
   color: var(--label);
-  margin-bottom: 12px;
+  margin-bottom: 28px;
   transition: color var(--t);
   line-height: 1.6;
 }
@@ -982,6 +975,7 @@ body.theme-thinking .exp-header { margin-bottom: 6px; }
   .activity-row    { grid-template-columns: 70px 1fr; gap: 12px; }
   .work-card::before { left: -16px; }
   .thinking-grid   { display: none; }
+  .scroll-toast    { display: none; }
   body.theme-thinking .section { padding: 36px 0; }
   body.theme-thinking .section::after { display: none; }
 }
