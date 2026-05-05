@@ -6,7 +6,7 @@ const vibeProjects = [
     what: '8 puzzle games in one place. Logic, deduction, the satisfaction of figuring something out.',
     why: 'I kept looking for exactly this and nobody had made it.',
     status: 'in progress',
-    link: null, // add Deduce URL here when ready
+    link: 'https://deduce-i312.vercel.app?_vercel_share=ewPoQuZzMXkcAJ09F4OY4Wfo0UwXDaHH',
   },
 ]
 
@@ -42,8 +42,9 @@ export default function VibeCoded() {
           {vibeProjects.map((p) => (
             <div key={p.name} className="vibe-item" data-cursor-label="built this">
               <div className="vibe-item-inner">
-                {/* Deduce thumbnail — replace div with <img src="..." alt="Deduce" /> */}
-                <div className="vibe-thumb" aria-hidden="true" />
+                <div className="vibe-thumb">
+                  <img src="/deduce.jpg" alt="Deduce" />
+                </div>
                 <div className="vibe-content">
                   <p className="vibe-name" data-design-spec={NAME_SPEC}>{p.name}</p>
                   <p className="vibe-what" data-design-spec={WHAT_SPEC}>{p.what}</p>

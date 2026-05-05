@@ -74,7 +74,14 @@ export default function Opening() {
         </div>
 
         <p className="opening-currently">
-          Currently: designing through complexity at Carboledger, building a puzzle game called Deduce,
+          Currently: designing through complexity at Carboledger, building a puzzle game called{' '}
+          <a
+            href="https://deduce-i312.vercel.app?_vercel_share=ewPoQuZzMXkcAJ09F4OY4Wfo0UwXDaHH"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-cursor-label="play"
+            style={{ color: 'var(--accent)', textDecoration: 'none' }}
+          >Deduce</a>,
           and looking for the next street to walk down.
         </p>
 
