@@ -1,8 +1,8 @@
 import { useTheme } from '../context/ThemeContext'
 
 const links = [
-  { label: 'Resume',   href: '#',                                                              attrs: { target: '_blank', rel: 'noopener noreferrer' } },
-  { label: 'Email',    href: 'mailto:hello@vaishaliravindran.com' },
+  { label: 'Resume',   href: 'https://drive.google.com/file/d/1J3ckLCdyfoTQFY47uVWYJ0U9PL9t53Im/view?usp=sharing', attrs: { target: '_blank', rel: 'noopener noreferrer' } },
+  { label: 'Email',    href: 'mailto:vaishuravindran17@gmail.com' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/vaishali-ravindran-6295b520a/',      attrs: { target: '_blank', rel: 'noopener noreferrer' } },
   { label: 'Behance',  href: 'https://www.behance.net/vaishalravindr1/projects',               attrs: { target: '_blank', rel: 'noopener noreferrer' } },
   { label: 'Medium',   href: 'https://medium.com/@vaishuravindran17',                          attrs: { target: '_blank', rel: 'noopener noreferrer' } },

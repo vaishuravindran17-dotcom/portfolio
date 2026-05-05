@@ -38,8 +38,9 @@ export default function Opening() {
       <div className="container">
         <p className="opening-greeting">{greeting}</p>
 
-        {/* swap div for <img src="/vaishali.jpg" alt="Vaishali" /> when photo is ready */}
-        <div className="opening-avatar" aria-hidden="true" />
+        <div className="opening-avatar">
+          <img src="/vaishali.jpg" alt="Vaishali Ravindran" />
+        </div>
 
         <p className="opening-quote" data-design-spec={QUOTE_SPEC}>
           &ldquo;We will never be able to become the user. So I just try to stay close.&rdquo;
