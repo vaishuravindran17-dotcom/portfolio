@@ -1050,7 +1050,7 @@ body.theme-thinking .exp-header { margin-bottom: 6px; }
 }
 
 .project-section       { margin-bottom: 34px; }
-.project-section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: lowercase; color: var(--label); margin-bottom: 10px; display: block; transition: color var(--t); }
+.project-section-label { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--label); margin-bottom: 10px; display: block; transition: color var(--t); }
 .project-body          { font-size: 15px; line-height: 1.8; }
 
 .project-image-slot {
