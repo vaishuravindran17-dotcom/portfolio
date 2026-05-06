@@ -53,13 +53,13 @@ export default function VibeCoded() {
                   <img src="/Deduce.png" alt="Deduce" />
                 </div>
                 <div className="vibe-content">
-                  <p className="vibe-name" data-design-spec={NAME_SPEC}>{p.name}</p>
+                  <div className="vibe-name-row">
+                    <p className="vibe-name" data-design-spec={NAME_SPEC}>{p.name}</p>
+                    <span className="vibe-status">{p.status}</span>
+                  </div>
                   <p className="vibe-what" data-design-spec={WHAT_SPEC}>{p.what}</p>
                   <p className="vibe-why" data-design-spec={WHY_SPEC}>{p.why}</p>
-                  <div className="vibe-footer">
-                    <span className="vibe-status">{p.status}</span>
-                    <span className="vibe-cta">Try Deduce &rarr;</span>
-                  </div>
+                  <span className="vibe-cta">Try Deduce &rarr;</span>
                 </div>
               </a>
             </div>
