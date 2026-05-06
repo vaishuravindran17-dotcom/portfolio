@@ -62,13 +62,13 @@ export const projects = [
       },
       {
         label: 'AI Action Items',
-        media: { type: 'video', src: '/Ai action items video.mov' },
+        media: { type: 'video', src: '/Ai action items video.mp4' },
         feeling: "If the summary tells you what happened, action items tell you what to do next. A natural extension. Once you can summarise a video, extracting what needs to happen after it is the obvious next step. The hard part was getting the AI to know the difference between a task and a talking point.",
         thinking: "Designed as a natural extension of the AI content suite, AI Action Items extracted a structured list of next steps directly from video content, turning passive watching into active follow-through. Optimising the AI's ability to distinguish actionable tasks from general discussion, across varied video types, was the defining design and engineering challenge.",
       },
       {
         label: 'Screen Recorder',
-        media: { type: 'video', src: '/SSR launch website final.mov' },
+        media: { type: 'video', src: '/SSR launch website final (1).mp4' },
         feeling: "People were recording elsewhere and coming back to upload. That's a broken workflow. It means the product isn't where the work is. We fixed that. Screen only or screen and camera, audio input, video source, go. The challenge was keeping it simple. There were so many options. The wrong call was to show all of them.",
         thinking: "Designed to close the loop between creation and storage, the Spiti Screen Recorder brought recording natively into the product, eliminating the need for third-party tools entirely. Offering two recording formats, flexible audio and video source selection, and a live camera preview, the challenge was restraint. A feature with many options that needed to feel like it had only the ones that mattered.",
       },
