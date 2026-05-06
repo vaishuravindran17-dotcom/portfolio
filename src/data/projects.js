@@ -82,6 +82,7 @@ export const projects = [
   {
     slug: 'roado',
     title: 'Request for Quotation (RFQ)',
+    cover: '/Roado cover.png',
     company: 'Roado',
     role: 'UI/UX Designer',
     year: '2021–2022',
@@ -99,19 +100,19 @@ export const projects = [
       },
       {
         label: 'Consignment Note',
-        media: { type: 'video', src: '/Roado_1.mp4' },
+        media: { type: 'video', src: '/Roado 1.mp4' },
         feeling: "Before I could design anything, I had to understand what a consignment note actually was. What a fleet manager needed to see at 6am. What an overdue delivery looked like to someone whose business depended on it arriving on time.",
         thinking: "The Consignment Note module gave fleet managers a complete view of freight movement. Tracking trucks in real time on a live map, monitoring ongoing, upcoming and completed consignments, managing e-POD, purchase orders and eway bill generation, all from a single surface. The challenge was making dense, time-sensitive logistics data readable and actionable at a glance.",
       },
       {
         label: 'RFQ — Industry Side',
-        media: { type: 'video', src: '/RFQ_1.mp4' },
+        media: { type: 'video', src: '/RFQ 1.mp4' },
         feeling: "Industries need trucks. They don't always have them. The RFQ flow was about giving them a way to ask, compare, negotiate and decide without the chaos of doing it over calls and spreadsheets.",
         thinking: "The industry-side RFQ module enabled enterprise companies to create requests for quotation, specifying origin, destination, number of trucks required, and timeline. Transporters respond with quotes, industries can counter-quote or approve directly. Designed across states: Live, Closed, Cancelled with clear visual hierarchy for quote comparison, counter-quote management, and time-sensitive approvals. The challenge was designing one coherent flow for two completely different users acting on the same data.",
       },
       {
         label: 'RFQ — Transporter Side',
-        media: { type: 'video', src: '/RFQ_2.mp4' },
+        media: { type: 'video', src: '/RFQ 2.mp4' },
         feeling: "The transporter sees the same request but needs completely different things from it. They're not deciding. They're responding, competing, waiting. The design had to make that feel fair and clear.",
         thinking: "The transporter-side RFQ module allowed logistics companies to view incoming requests, submit quotes, counter-quote in response to industry counters, and accept or re-quote as negotiations progressed. Designed across states: Live, Archive, Won with actions that changed dynamically based on where a quote stood in the negotiation cycle. Keeping both sides of the same flow coherent without one feeling like an afterthought was the defining challenge.",
       },
