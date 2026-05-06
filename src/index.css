@@ -659,8 +659,7 @@ body.theme-thinking .exp-header { margin-bottom: 6px; }
 
 .vibe-item-inner {
   display: flex;
-  gap: 16px;
-  align-items: flex-start;
+  flex-direction: column;
   transition: transform 240ms ease;
 }
 
@@ -668,15 +667,18 @@ body.theme-thinking .exp-header { margin-bottom: 6px; }
 .vibe-item-inner:hover .vibe-name { color: var(--accent); }
 
 .vibe-thumb {
-  width: 120px;
-  height: 80px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   flex-shrink: 0;
   background: var(--surface);
   border-radius: 4px;
-  border: 0.5px solid color-mix(in srgb, var(--secondary) 28%, transparent);
-  transition: background var(--t);
+  border: 0.5px solid color-mix(in srgb, var(--secondary) 20%, transparent);
+  transition: background var(--t), opacity 240ms ease;
   overflow: hidden;
+  margin-bottom: 10px;
 }
+
+.vibe-item-inner:hover .vibe-thumb { opacity: 0.82; }
 
 .vibe-thumb img {
   width: 100%;
