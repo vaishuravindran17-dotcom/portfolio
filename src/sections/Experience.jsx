@@ -28,7 +28,7 @@ const experiences = [
   {
     company: 'Collej',
     role: 'Mentor',
-    period: 'Mar 2023 – Present',
+    period: 'Mar 2023 – Mar 2024',
     type: null,
     feeling: "A student asked me something I couldn't answer cleanly. I've been thinking about it since.",
     thinking: "Mentoring early-stage design students in critique, essentials, and interaction design.",
