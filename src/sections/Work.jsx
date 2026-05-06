@@ -24,7 +24,9 @@ export default function Work() {
               className="work-card"
               data-cursor-label="read"
             >
-              <div className="work-card-image" aria-hidden="true" />
+              <div className="work-card-image" aria-hidden="true">
+                {p.cover && <img src={p.cover} alt="" />}
+              </div>
               <div className="work-card-inner">
                 <p className="work-card-title" data-design-spec={TITLE_SPEC}>{p.title}</p>
                 <p className="work-card-meta" data-design-spec={META_SPEC}>{p.company || p.role} &middot; {p.year}</p>

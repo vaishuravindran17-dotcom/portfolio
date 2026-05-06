@@ -27,6 +27,7 @@ export const projects = [
   {
     slug: 'spiti',
     title: 'Spiti Connect · AI · Screen Recorder',
+    cover: '/Spiti cover.png',
     company: 'Spiti',
     role: 'Product Designer',
     year: '2022–2023',
