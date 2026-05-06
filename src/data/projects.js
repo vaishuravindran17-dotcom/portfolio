@@ -62,7 +62,7 @@ export const projects = [
       },
       {
         label: 'AI Action Items',
-        media: { type: 'placeholder', label: 'Visual coming' },
+        media: { type: 'video', src: '/Ai action items video.mp4' },
         feeling: "If the summary tells you what happened, action items tell you what to do next. A natural extension. Once you can summarise a video, extracting what needs to happen after it is the obvious next step. The hard part was getting the AI to know the difference between a task and a talking point.",
         thinking: "Designed as a natural extension of the AI content suite, AI Action Items extracted a structured list of next steps directly from video content, turning passive watching into active follow-through. Optimising the AI's ability to distinguish actionable tasks from general discussion, across varied video types, was the defining design and engineering challenge.",
       },
