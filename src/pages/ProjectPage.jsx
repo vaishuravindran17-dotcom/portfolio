@@ -13,9 +13,10 @@ function ImageSlot({ label = 'Image placeholder' }) {
 }
 
 function VideoEmbed({ src }) {
+  const encoded = src.replace(/ /g, '%20')
   return (
     <div className="project-video">
-      <video autoPlay loop muted playsInline src={src} />
+      <video autoPlay loop muted playsInline src={encoded} />
     </div>
   )
 }
