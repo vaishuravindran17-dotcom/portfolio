@@ -12,11 +12,28 @@ function ImageSlot({ label = 'Image placeholder' }) {
   )
 }
 
+function VideoEmbed({ src }) {
+  return (
+    <div className="project-video">
+      <video controls playsInline src={src} />
+    </div>
+  )
+}
+
 function ProjectSection({ label, children }) {
   return (
     <div className="project-section">
       <span className="project-section-label">{label}</span>
       <div className="project-body">{children}</div>
+    </div>
+  )
+}
+
+function ModeBlock({ feeling, thinking, isFeeling }) {
+  return (
+    <div className="mode-wrapper">
+      <p className={`mode-block ${isFeeling ? 'mode-visible' : 'mode-hidden'}`}>{feeling}</p>
+      <p className={`mode-block ${!isFeeling ? 'mode-visible' : 'mode-hidden'}`}>{thinking}</p>
     </div>
   )
 }
@@ -42,7 +59,7 @@ export default function ProjectPage() {
     )
   }
 
-  const content = isFeeling ? project.feeling : project.thinking
+  const meta = project.company || project.role
 
   return (
     <main style={{ paddingTop: 100, paddingBottom: 0 }}>
@@ -57,15 +74,14 @@ export default function ProjectPage() {
             {project.tags.map(t => (
               <span key={t} className="tag">{t}</span>
             ))}
-            <span className="tag">{project.year}</span>
           </div>
 
           <h1
             style={{
               fontFamily: 'var(--font-display)',
               fontWeight: 400,
-              fontSize: 'clamp(28px, 5vw, 40px)',
-              marginBottom: 20,
+              fontSize: 'clamp(24px, 5vw, 38px)',
+              marginBottom: 8,
               lineHeight: 1.2,
               transition: 'color var(--t)',
             }}
@@ -73,82 +89,60 @@ export default function ProjectPage() {
             {project.title}
           </h1>
 
-          <div className="mode-wrapper">
-            <p className={`project-hook mode-block ${isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
-              {project.feeling.hook}
-            </p>
-            <p className={`project-hook mode-block ${!isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
-              {project.thinking.hook}
-            </p>
-          </div>
+          <p className="project-company">{meta} · {project.year}</p>
+
+          {/* Hook — only for projects without custom sections */}
+          {!project.sections && project.feeling?.hook && (
+            <div className="mode-wrapper" style={{ marginTop: 20 }}>
+              <p className={`project-hook mode-block ${isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
+                {project.feeling.hook}
+              </p>
+              <p className={`project-hook mode-block ${!isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
+                {project.thinking.hook}
+              </p>
+            </div>
+          )}
         </div>
 
-        <ImageSlot label="Hero / overview image" />
+        {/* Custom sections (e.g. Spiti) */}
+        {project.sections ? (
+          project.sections.map((s, i) => (
+            <ProjectSection key={i} label={s.label}>
+              {s.media?.type === 'video' && <VideoEmbed src={s.media.src} />}
+              {s.media?.type === 'placeholder' && <ImageSlot label={s.media.label} />}
+              <ModeBlock feeling={s.feeling} thinking={s.thinking} isFeeling={isFeeling} />
+            </ProjectSection>
+          ))
+        ) : (
+          <>
+            <ImageSlot label="Hero / overview image" />
 
-        {/* Context */}
-        <ProjectSection label="context">
-          <div className="mode-wrapper">
-            <p className={`mode-block ${isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
-              {project.feeling.context}
-            </p>
-            <p className={`mode-block ${!isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
-              {project.thinking.context}
-            </p>
-          </div>
-        </ProjectSection>
+            <ProjectSection label="context">
+              <ModeBlock feeling={project.feeling.context} thinking={project.thinking.context} isFeeling={isFeeling} />
+            </ProjectSection>
 
-        {/* Problem */}
-        <ProjectSection label="the problem">
-          <div className="mode-wrapper">
-            <p className={`mode-block ${isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
-              {project.feeling.problem}
-            </p>
-            <p className={`mode-block ${!isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
-              {project.thinking.problem}
-            </p>
-          </div>
-        </ProjectSection>
+            <ProjectSection label="the problem">
+              <ModeBlock feeling={project.feeling.problem} thinking={project.thinking.problem} isFeeling={isFeeling} />
+            </ProjectSection>
 
-        <ImageSlot label="Process / research image" />
+            <ImageSlot label="Process / research image" />
 
-        {/* Process */}
-        <ProjectSection label="process">
-          <div className="mode-wrapper">
-            <p className={`mode-block ${isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
-              {project.feeling.process}
-            </p>
-            <p className={`mode-block ${!isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
-              {project.thinking.process}
-            </p>
-          </div>
-        </ProjectSection>
+            <ProjectSection label="process">
+              <ModeBlock feeling={project.feeling.process} thinking={project.thinking.process} isFeeling={isFeeling} />
+            </ProjectSection>
 
-        <ImageSlot label="Design exploration / wireframes" />
-        <ImageSlot label="Final screens" />
+            <ImageSlot label="Design exploration / wireframes" />
+            <ImageSlot label="Final screens" />
 
-        {/* Outcome */}
-        <ProjectSection label="outcome">
-          <div className="mode-wrapper">
-            <p className={`mode-block ${isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
-              {project.feeling.outcome}
-            </p>
-            <p className={`mode-block ${!isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
-              {project.thinking.outcome}
-            </p>
-          </div>
-        </ProjectSection>
+            <ProjectSection label="outcome">
+              <ModeBlock feeling={project.feeling.outcome} thinking={project.thinking.outcome} isFeeling={isFeeling} />
+            </ProjectSection>
 
-        {/* Learned */}
-        <ProjectSection label="what I learned">
-          <div className="mode-wrapper">
-            <p className={`mode-block ${isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
-              {project.feeling.learned}
-            </p>
-            <p className={`mode-block ${!isFeeling ? 'mode-visible' : 'mode-hidden'}`}>
-              {project.thinking.learned}
-            </p>
-          </div>
-        </ProjectSection>
+            <ProjectSection label="what I learned">
+              <ModeBlock feeling={project.feeling.learned} thinking={project.thinking.learned} isFeeling={isFeeling} />
+            </ProjectSection>
+          </>
+        )}
 
         {/* Prev / Next nav */}
         <div className="project-nav">

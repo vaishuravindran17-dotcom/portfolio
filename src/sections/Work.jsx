@@ -27,7 +27,7 @@ export default function Work() {
               <div className="work-card-image" aria-hidden="true" />
               <div className="work-card-inner">
                 <p className="work-card-title" data-design-spec={TITLE_SPEC}>{p.title}</p>
-                <p className="work-card-meta" data-design-spec={META_SPEC}>{p.role} &middot; {p.year}</p>
+                <p className="work-card-meta" data-design-spec={META_SPEC}>{p.company || p.role} &middot; {p.year}</p>
               </div>
             </Link>
           ))}
