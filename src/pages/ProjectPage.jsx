@@ -15,7 +15,7 @@ function ImageSlot({ label = 'Image placeholder' }) {
 function VideoEmbed({ src }) {
   return (
     <div className="project-video">
-      <video controls playsInline src={src} />
+      <video autoPlay loop muted playsInline src={src} />
     </div>
   )
 }
