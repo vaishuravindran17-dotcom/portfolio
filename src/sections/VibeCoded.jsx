@@ -56,7 +56,10 @@ export default function VibeCoded() {
                   <p className="vibe-name" data-design-spec={NAME_SPEC}>{p.name}</p>
                   <p className="vibe-what" data-design-spec={WHAT_SPEC}>{p.what}</p>
                   <p className="vibe-why" data-design-spec={WHY_SPEC}>{p.why}</p>
-                  <span className="vibe-status">{p.status}</span>
+                  <div className="vibe-footer">
+                    <span className="vibe-status">{p.status}</span>
+                    <span className="vibe-cta">Try Deduce &rarr;</span>
+                  </div>
                 </div>
               </a>
             </div>
