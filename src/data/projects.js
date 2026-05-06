@@ -81,28 +81,46 @@ export const projects = [
   },
   {
     slug: 'roado',
-    title: 'Roado',
+    title: 'Request for Quotation (RFQ)',
+    company: 'Roado',
     role: 'UI/UX Designer',
     year: '2021–2022',
-    tags: ['Fleet Management', 'B2B', 'Mobile'],
-    feeling: {
-      hook: 'My first job. We worked weekends helping move oxygen cylinders during the pandemic.',
-      body: "That was the product, that was the problem, that was the user. Every single day I didn't know something I didn't know I didn't know.",
-      context: 'Roado is a fleet management platform connecting industries with transporters. During my time, the product was actively used for logistics coordination including medical supply chains.',
-      problem: "Two very different user types — industries needing to dispatch freight, and transporters managing vehicles and drivers — needed a seamless connection with minimal friction on both ends.",
-      process: "Learned by doing. Wireframes, prototypes, mockups across both user flows. Heavy research. Made mistakes quickly and fixed them faster.",
-      outcome: 'Shipped across industry and transporter-side flows. Contributed to research and strategy for new modules. Steep learning curve, fast growth.',
-      learned: "The hardest part of being a first-year designer is not knowing what you don't know. The only fix is to keep going.",
-    },
-    thinking: {
-      hook: 'First design role. Full design execution across two user types — industries and transporters.',
-      body: 'Wireframes, prototypes, and mockups across both user flows. Contributed to research and strategy for new modules. Mobile-first.',
-      context: 'Fleet management and logistics SaaS. Two primary user types: industries (freight dispatchers) and transporters (vehicle and driver managers).',
-      problem: "Designing for two completely different mental models within one product. What makes sense to a dispatcher is often opaque to a transporter and vice versa.",
-      process: 'User research across both types. Parallel flows. Continuous iteration. Heavy stakeholder collaboration to balance competing needs.',
-      outcome: 'Shipped across industry and transporter flows. Built foundational understanding of B2B mobile product design.',
-      learned: "B2B product design requires depth in the user's domain, not just the user's screen.",
-    },
+    tags: ['Fleet Management', 'B2B', 'Web', 'Mobile'],
+    sections: [
+      {
+        label: 'Goal',
+        feeling: "Roado was my first job. The product was complex, the domain was new, and the users were nothing like anyone I had designed for before. I had to learn an entire industry before I could design anything useful in it.",
+        thinking: "Roado is a fleet management platform that helps enterprise companies track freight across web, tablet, and mobile. Separate products for three distinct users: industries, transporters, and drivers. I was responsible for designing core modules serving both the industry and transporter sides of the product.",
+      },
+      {
+        label: 'Role',
+        feeling: "First design hire. Which meant working closely with founders, product managers and developers every single day. Later managing another designer. New to everything but never at a distance from the decisions that mattered.",
+        thinking: "First design hire. Worked directly with founders, product managers and developers across the full product cycle. Later managed one designer. Responsible for wireframes, prototypes and mockups across industry and transporter user types. Web, tablet and mobile.",
+      },
+      {
+        label: 'Consignment Note',
+        media: { type: 'video', src: '/Roado_1.mp4' },
+        feeling: "Before I could design anything, I had to understand what a consignment note actually was. What a fleet manager needed to see at 6am. What an overdue delivery looked like to someone whose business depended on it arriving on time.",
+        thinking: "The Consignment Note module gave fleet managers a complete view of freight movement. Tracking trucks in real time on a live map, monitoring ongoing, upcoming and completed consignments, managing e-POD, purchase orders and eway bill generation, all from a single surface. The challenge was making dense, time-sensitive logistics data readable and actionable at a glance.",
+      },
+      {
+        label: 'RFQ — Industry Side',
+        media: { type: 'video', src: '/RFQ_1.mp4' },
+        feeling: "Industries need trucks. They don't always have them. The RFQ flow was about giving them a way to ask, compare, negotiate and decide without the chaos of doing it over calls and spreadsheets.",
+        thinking: "The industry-side RFQ module enabled enterprise companies to create requests for quotation, specifying origin, destination, number of trucks required, and timeline. Transporters respond with quotes, industries can counter-quote or approve directly. Designed across states: Live, Closed, Cancelled with clear visual hierarchy for quote comparison, counter-quote management, and time-sensitive approvals. The challenge was designing one coherent flow for two completely different users acting on the same data.",
+      },
+      {
+        label: 'RFQ — Transporter Side',
+        media: { type: 'video', src: '/RFQ_2.mp4' },
+        feeling: "The transporter sees the same request but needs completely different things from it. They're not deciding. They're responding, competing, waiting. The design had to make that feel fair and clear.",
+        thinking: "The transporter-side RFQ module allowed logistics companies to view incoming requests, submit quotes, counter-quote in response to industry counters, and accept or re-quote as negotiations progressed. Designed across states: Live, Archive, Won with actions that changed dynamically based on where a quote stood in the negotiation cycle. Keeping both sides of the same flow coherent without one feeling like an afterthought was the defining challenge.",
+      },
+      {
+        label: 'What I Learned',
+        feeling: "Roado taught me that you cannot design for a domain you don't understand. Not really. The domain has to get into you first. And it taught me something else. A small feature, a missing state, an unclear action can cost a real person lakhs. That weight changed how I design.",
+        thinking: "Designing across two user types on the same flow, each with opposing goals and different mental models, built a foundation for thinking about complex B2B products. But the defining lesson was understanding consequence. In logistics, a design gap is not just a UX problem. It translates directly into financial penalty for real users. That lesson shapes every decision I make now.",
+      },
+    ],
   },
 ]
 
