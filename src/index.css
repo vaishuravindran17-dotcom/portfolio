@@ -628,34 +628,36 @@ body.theme-thinking .exp-header { margin-bottom: 6px; }
 .vibe-item {
   padding: 20px 0;
   border-bottom: 0.5px solid color-mix(in srgb, var(--secondary) 28%, transparent);
+  position: relative;
 }
 
 .vibe-item:first-child {
   border-top: 0.5px solid color-mix(in srgb, var(--secondary) 28%, transparent);
 }
 
+.vibe-item::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 20px; bottom: 20px;
+  width: 2px;
+  background: var(--accent);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 240ms ease;
+}
+
+.vibe-item:has(.vibe-item-inner:hover)::before { transform: scaleY(1); }
+
 .vibe-item-inner {
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  border-radius: 6px;
-  padding: 4px;
-  margin: -4px;
-  transition: background 200ms ease;
-  cursor: pointer;
+  transition: transform 240ms ease;
 }
 
-.vibe-item-inner:hover {
-  background: color-mix(in srgb, var(--surface) 60%, transparent);
-}
-
-.vibe-item-inner:hover .vibe-name {
-  color: var(--accent);
-}
-
-.vibe-item-inner:hover .vibe-thumb {
-  border-color: color-mix(in srgb, var(--accent) 30%, transparent);
-}
+.vibe-item-inner:hover { transform: translateX(4px); }
+.vibe-item-inner:hover .vibe-name { color: var(--accent); }
 
 .vibe-thumb {
   width: 120px;
