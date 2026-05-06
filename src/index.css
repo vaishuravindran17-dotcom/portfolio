@@ -73,7 +73,7 @@ mark.hl {
 }
 
 /* ── Section base ── */
-.section { padding: 88px 0; }
+.section { padding: 68px 0; }
 
 .section + .section {
   border-top: 0.5px solid color-mix(in srgb, var(--secondary) 35%, transparent);
