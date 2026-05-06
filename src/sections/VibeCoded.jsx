@@ -50,7 +50,7 @@ export default function VibeCoded() {
                 style={{ textDecoration: 'none', color: 'inherit' }}
               >
                 <div className="vibe-thumb">
-                  <img src="/deduce.jpg" alt="Deduce" />
+                  <img src="/Deduce.png" alt="Deduce" />
                 </div>
                 <div className="vibe-content">
                   <p className="vibe-name" data-design-spec={NAME_SPEC}>{p.name}</p>
