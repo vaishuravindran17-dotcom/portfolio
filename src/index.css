@@ -638,6 +638,23 @@ body.theme-thinking .exp-header { margin-bottom: 6px; }
   display: flex;
   gap: 16px;
   align-items: flex-start;
+  border-radius: 6px;
+  padding: 4px;
+  margin: -4px;
+  transition: background 200ms ease;
+  cursor: pointer;
+}
+
+.vibe-item-inner:hover {
+  background: color-mix(in srgb, var(--surface) 60%, transparent);
+}
+
+.vibe-item-inner:hover .vibe-name {
+  color: var(--accent);
+}
+
+.vibe-item-inner:hover .vibe-thumb {
+  border-color: color-mix(in srgb, var(--accent) 30%, transparent);
 }
 
 .vibe-thumb {
@@ -680,6 +697,26 @@ body.theme-thinking .exp-header { margin-bottom: 6px; }
   background: var(--accent);
   display: inline-block;
   transition: background var(--t);
+}
+
+.vibe-footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.vibe-cta {
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.03em;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+.vibe-item-inner:hover .vibe-cta {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* ── Play / when not working ── */
