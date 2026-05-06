@@ -28,11 +28,9 @@ export default function Footer() {
           ))}
         </div>
 
-        {!isFeeling && (
-          <p className="footer-note">
-            Made late at night in Chennai. Listening to Merku Karaiyil on loop this month. Forgot to drink water again.
-          </p>
-        )}
+        <p className="footer-note">
+          Made late at night in Chennai. Listening to Merku Karaiyil on loop this month. Forgot to drink water again.
+        </p>
       </div>
     </footer>
   )
