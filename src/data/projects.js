@@ -1,28 +1,74 @@
 export const projects = [
   {
     slug: 'carboledger',
-    title: 'Carboledger',
+    title: 'SecureShare | Decarbonize',
+    company: 'Carboledger',
     role: 'Product Designer',
     year: '2024–Present',
     tags: ['Climate Tech', 'B2B', 'Enterprise'],
-    feeling: {
-      hook: "On day one I didn't know what ISCC meant. Two years later I was in rooms with sustainability experts, ESG auditors, and MNC clients — validating what we'd built together.",
-      body: "The product went from an idea to something real people depended on. That gap is the part I'm most proud of.",
-      context: "Carboledger is a climate tech startup building compliance and ESG tooling for enterprises navigating sustainability reporting requirements.",
-      problem: "Sustainability reporting is dense, regulatory, and deeply technical. Companies needed tools that could handle ISCC compliance, contribution analysis, and ESG benchmarking — without requiring an expert at every step.",
-      process: "I came in as the sole designer. The first months were almost entirely research — sitting with the domain, learning the regulatory language, building a vocabulary before building screens.",
-      outcome: "The product grew from 0 to $100k across multiple pilots and production launches. Shipped to MNCs including Musket and Bell. Currently building AI-assisted ESG workflows.",
-      learned: "You can't design something you don't understand. The first thing I needed to learn wasn't Figma — it was carbon accounting.",
-    },
-    thinking: {
-      hook: 'Sole designer owning the product end to end, from domain research to production launch.',
-      body: "Designed ISCC compliance tooling for Smart Balance, SecureShare's Contribution Analysis module, and AI × ESG agents — Data Collection, Questionnaire Response, Peer Benchmarking, Indexing. Shipped to MNCs including Musket and Bell. Product grew from 0 → $100k across pilots and production.",
-      context: 'B2B climate tech. Sustainability reporting, ISCC compliance, ESG benchmarking for enterprises.',
-      problem: 'No existing tooling handled ISCC compliance workflows at the depth enterprise clients needed. Manual processes, high error rates, no auditability.',
-      process: 'Full design ownership: domain research, user interviews with sustainability managers and ESG auditors, information architecture, interaction design, usability testing, and production handoff.',
-      outcome: '0 → $100k ARR across pilots and production launches. Shipped to MNCs including Musket and Bell. Currently leading design for AI × ESG agent workflows.',
-      learned: 'Designed a full design system from scratch to maintain consistency across a complex, multi-module B2B product.',
-    },
+    sections: [
+      {
+        label: 'Goal',
+        feeling: "Climate data is complex, domain-specific and deeply consequential. A sustainability manager trying to reduce their product's carbon footprint needs more than a dashboard. They need a tool that can hold the complexity of their decisions without collapsing it into something useless.",
+        thinking: "Carboledger's Decarbonize module helps sustainability managers model and reduce Product Carbon Footprint across their supply chain. I was responsible for the full design of the Scenario Builder feature — from research and client conversations to production. Built from scratch, currently live.",
+      },
+      {
+        label: 'Role',
+        feeling: "Sole designer. Spoke with clients, understood the domain, ideated, hit walls, found what was actually buildable, and shipped it.",
+        thinking: "Sole designer. End to end ownership across research, client interviews, ideation, design and production. Worked directly with sustainability domain experts and MNC clients including Afton Chemicals and Shaw.",
+      },
+      {
+        label: 'SecureShare',
+        feeling: "Before any of this analysis means anything, the data has to be trusted. SecureShare is how Carboledger makes that possible. Companies sharing carbon data with suppliers and customers, with full control over who sees what, without needing the other party to even be on Carboledger.",
+        thinking: "SecureShare enables companies to securely share carbon data — PCF, LCA, EPD — with supply chain partners. Granular permission controls for view, edit, and share. Reads Excel, PDFs, and custom formats automatically. Works even if the recipient doesn't use Carboledger. Keeps all sustainability data, communication, and updates in one place instead of email and spreadsheets.",
+      },
+      {
+        label: 'What is Decarbonize',
+        feeling: "Sustainability managers want to reduce their product's carbon footprint. But switching a raw material to a sustainable alternative costs lakhs. Before they commit, they need to know if it's worth it — across one product, across a customer's entire portfolio, across every product that shares that raw material. That's what this module is for.",
+        thinking: "Decarbonize is a carbon reduction module within Carboledger that allows sustainability managers to model the impact of switching raw materials to sustainable alternatives, compare scenarios visually, and assess the portfolio-wide impact of a material change before committing to it.",
+      },
+      {
+        label: 'New Scenario',
+        media: { type: 'placeholder', label: 'Video coming' },
+        feeling: "It starts with a question. What if I replaced this raw material with something more sustainable? The user selects a product, picks a raw material, chooses an alternative. The Sankey diagram shows the entire PCF of the product broken down to its most granular level. Raw materials, transport, production. Every flow visible, every number traceable.",
+        thinking: "Users initiate a scenario by selecting a product and choosing a raw material to substitute. The Sankey diagram renders the full Product Carbon Footprint breakdown — raw materials, transport, production and auxiliaries — at a granular level. Three view modes: Sankey, Chart, and Grid, allowing users to consume the same data in the format that works best for them.",
+      },
+      {
+        label: 'Scenario Comparison',
+        media: { type: 'video', src: '/Scenario_comparison.mp4' },
+        feeling: "Once a scenario is created, the real question begins. Is the alternative actually better? The comparison view puts the current product and the new scenario side by side. Same Sankey, same breakdown, same scale. The difference is visible without having to calculate it.",
+        thinking: "The scenario comparison surface places the current product PCF and the modelled alternative side by side in Sankey, Chart, and Grid views. Users can see the exact delta in carbon footprint at every level of the supply chain — raw materials, transport, production — enabling an evidence-based decision before any material switch is made.",
+      },
+      {
+        label: 'Charts Comparison',
+        media: { type: 'video', src: '/Charts_comparison.mp4' },
+        feeling: "Not everyone reads a Sankey. Some users need bars, not flows. The chart view takes the same data and makes it readable in a different way. Same comparison, different lens.",
+        thinking: "The chart view renders the same scenario comparison data in a bar chart format, offering an alternative consumption mode for users who need to present findings to stakeholders or prefer quantitative comparison over flow visualisation.",
+      },
+      {
+        label: 'Assess Portfolio',
+        media: { type: 'video', src: '/Access_portfolio.mp4' },
+        feeling: "One product is a test. The portfolio assessment is the real decision. If I switch this raw material across every product it touches, across every customer it's associated with, what is the total impact? That's the question this feature answers. And because switching costs lakhs, getting the answer right matters.",
+        thinking: "Portfolio assessment extends the scenario beyond a single product. Users select a customer and product group, and the tool calculates the impact of the material substitution across every associated product in that customer's portfolio — showing impacted products, current vs scenario PCF values, and the aggregate carbon reduction potential. Enables a business case to be built before a procurement decision is made.",
+      },
+      {
+        label: 'Save Scenario',
+        media: { type: 'video', src: '/Save_scenario.mp4' },
+        feeling: "After all the modelling, the comparison, the portfolio assessment, you save it. Give it a name. Come back to it. Share it. The work doesn't disappear.",
+        thinking: "Scenarios are saved with a user-defined name and persist across sessions. Saved scenarios can be shared with stakeholders, revisited, and used as the basis for future comparisons or portfolio assessments.",
+      },
+      {
+        label: 'Material Finder',
+        media: { type: 'video', src: '/Material_finder.mp4' },
+        feeling: "Before you can build a scenario, you need to know what alternatives exist. That's harder than it sounds. Sustainable certified materials are not easy to find. And even when you find them, their PCF values rarely exist anywhere publicly. So we built a curated pool of certified alternatives ourselves — and for the ones without PCF data, we request it directly from the supplier. The tool does the asking so the sustainability manager doesn't have to.",
+        thinking: "Material Finder is a searchable database of certified sustainable material alternatives, filterable by region, industry, category and certification type. Where PCF data for an alternative is unavailable, the platform initiates supplier data requests on behalf of the user — tracking request status across In Progress, Response Received, and Not Found states. The curated pool of certified alternatives represents a significant data asset, built to solve one of the most practical blockers in decarbonisation: finding credible substitutes with verifiable sustainability credentials.",
+      },
+      {
+        label: 'The Design Challenge',
+        feeling: "The problem with designing for complex domain-specific data is not a lack of ideas. We had a hundred ideas for every feature. The problem was finding what was actually buildable. What data could be procured. What the system could support. What a sustainability manager could actually use under real conditions. Every good decision here came after understanding ten constraints.",
+        thinking: "The core design challenge was not ideation but implementation feasibility. Operating in a specific domain with complex data dependencies meant every design decision had to be validated against what could actually be built, what data could be reliably sourced, and what a sustainability manager could practically use. Narrowing from possibility to practicality was the defining skill this module required.",
+      },
+    ],
   },
   {
     slug: 'spiti',
