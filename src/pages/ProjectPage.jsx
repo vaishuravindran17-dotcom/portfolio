@@ -15,7 +15,7 @@ function ImageSlot({ label = 'Image placeholder' }) {
 function ProjectImage({ src }) {
   return (
     <div className="project-video" style={{ background: 'transparent', border: 'none' }}>
-      <img src={src.replace(/ /g, '%20')} alt="" style={{ width: '100%', display: 'block', borderRadius: 6 }} />
+      <img src={encodeURIComponent(src).replace(/%2F/g, '/')} alt="" style={{ width: '100%', display: 'block', borderRadius: 6 }} />
     </div>
   )
 }
@@ -28,7 +28,7 @@ function renderMedia(m, key) {
 }
 
 function VideoEmbed({ src }) {
-  const encoded = src.replace(/ /g, '%20')
+  const encoded = encodeURIComponent(src).replace(/%2F/g, '/')
   return (
     <div className="project-video">
       <video autoPlay loop muted playsInline src={encoded} />
