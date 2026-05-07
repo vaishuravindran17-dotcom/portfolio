@@ -72,6 +72,21 @@ export const projects = [
     ],
   },
   {
+    slug: 'project-2',
+    title: 'Project Title',
+    company: 'Company',
+    role: 'Product Designer',
+    year: '2024',
+    tags: ['Tag 1', 'Tag 2'],
+    sections: [
+      {
+        label: 'Goal',
+        feeling: 'Coming soon.',
+        thinking: 'Coming soon.',
+      },
+    ],
+  },
+  {
     slug: 'spiti',
     title: 'Spiti Connect · AI · Screen Recorder',
     cover: '/Spiti cover.png',
