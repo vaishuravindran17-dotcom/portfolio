@@ -2,6 +2,7 @@ export const projects = [
   {
     slug: 'carboledger',
     title: 'SecureShare | Decarbonize',
+    cover: '/Contribution analysis cover.png',
     company: 'Carboledger',
     role: 'Product Designer',
     year: '2024–Present',
