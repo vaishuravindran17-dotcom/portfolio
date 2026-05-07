@@ -7,7 +7,7 @@ const LABEL_SPEC = "element: section-label\nfont: DM Sans · 500\nsize: 10px\ntr
 const TITLE_SPEC = "element: card-title\nfont: DM Serif Display · 400\nsize: 20px\nline-height: 1.3\ncolor: --text"
 const META_SPEC  = "element: card-meta\nfont: DM Sans · regular\nsize: 11px\ntracking: 0.02em\ncolor: --label"
 
-const PROTECTED = ['carboledger', 'project-2']
+const PROTECTED = ['carboledger', 'greenskills']
 
 export default function Work() {
   const navigate = useNavigate()

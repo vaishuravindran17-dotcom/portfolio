@@ -12,6 +12,21 @@ function ImageSlot({ label = 'Image placeholder' }) {
   )
 }
 
+function ProjectImage({ src }) {
+  return (
+    <div className="project-video" style={{ background: 'transparent', border: 'none' }}>
+      <img src={src.replace(/ /g, '%20')} alt="" style={{ width: '100%', display: 'block', borderRadius: 6 }} />
+    </div>
+  )
+}
+
+function renderMedia(m, key) {
+  if (m.type === 'video')       return <VideoEmbed key={key} src={m.src} />
+  if (m.type === 'image')       return <ProjectImage key={key} src={m.src} />
+  if (m.type === 'placeholder') return <ImageSlot key={key} label={m.label} />
+  return null
+}
+
 function VideoEmbed({ src }) {
   const encoded = src.replace(/ /g, '%20')
   return (
@@ -109,8 +124,9 @@ export default function ProjectPage() {
         {project.sections ? (
           project.sections.map((s, i) => (
             <ProjectSection key={i} label={s.label}>
-              {s.media?.type === 'video' && <VideoEmbed src={s.media.src} />}
-              {s.media?.type === 'placeholder' && <ImageSlot label={s.media.label} />}
+              {Array.isArray(s.media)
+                ? s.media.map((m, j) => renderMedia(m, j))
+                : s.media && renderMedia(s.media)}
               <ModeBlock feeling={s.feeling} thinking={s.thinking} isFeeling={isFeeling} />
             </ProjectSection>
           ))
