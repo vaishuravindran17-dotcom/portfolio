@@ -21,17 +21,18 @@ function ProjectImage({ src }) {
 }
 
 function renderMedia(m, key) {
-  if (m.type === 'video')       return <VideoEmbed key={key} src={m.src} />
+  if (m.type === 'video')       return <VideoEmbed key={key} src={m.src} crop={m.crop} />
   if (m.type === 'image')       return <ProjectImage key={key} src={m.src} />
   if (m.type === 'placeholder') return <ImageSlot key={key} label={m.label} />
   return null
 }
 
-function VideoEmbed({ src }) {
+function VideoEmbed({ src, crop }) {
   const encoded = encodeURIComponent(src).replace(/%2F/g, '/')
+  const style = crop ? { clipPath: `inset(${crop}px 0 0 0)` } : {}
   return (
     <div className="project-video">
-      <video autoPlay loop muted playsInline src={encoded} />
+      <video autoPlay loop muted playsInline src={encoded} style={style} />
     </div>
   )
 }

@@ -110,21 +110,21 @@ export const projects = [
       {
         label: 'Scope 1 & 2 Data Collection',
         media: [
-          { type: 'video', src: '/Scope 1 & 2 data collection - Collector view.mp4' },
-          { type: 'video', src: '/Scope 1 & 2 data collection - Data providers view.mp4' },
+          { type: 'video', src: '/Scope 1 & 2 data collection - Collector view.mp4', crop: 2 },
+          { type: 'video', src: '/Scope 1 & 2 data collection - Data providers view.mp4', crop: 2 },
         ],
         feeling: "Scope data doesn't live in one place. It lives in factories, warehouses, office buildings, each managed by a different person. The collector sets up the campaign. The data provider receives a request, answers questions specific to their facility, uploads evidence, and submits. The agent handles the follow-up so the collector doesn't have to chase.",
         thinking: "Two-sided agent with distinct interfaces for collectors and data providers. Collectors initiate data collection campaigns by specifying what data is needed. The agent generates contextually relevant questions per facility type and sends them to the assigned data providers. Providers respond via a guided interface with evidence upload. Collector view tracks response status across contributors in real time.",
       },
       {
         label: 'Peer Benchmarking',
-        media: { type: 'video', src: '/Peer benchmarking.mp4' },
+        media: { type: 'video', src: '/Peer benchmarking.mp4', crop: 2 },
         feeling: "It's hard to know how well you're doing until you can see how others are doing. Peer benchmarking takes a company's ESG report and compares it against peer company reports — surfacing gaps, identifying areas to improve, and giving the sustainability team something concrete to act on.",
         thinking: "The peer benchmarking agent analyses a company's ESG disclosures against uploaded peer reports to generate a comparative benchmarking output. Identifies performance gaps and improvement areas across ESG metrics. Supports GRI, CSRD, SASB, and TCFD standards. References peer reports and company policy from the knowledge base to produce context-specific analysis.",
       },
       {
         label: 'CSRD Agent',
-        media: { type: 'video', src: '/CSRD agent.mp4' },
+        media: { type: 'video', src: '/CSRD agent.mp4', crop: 2 },
         feeling: "CSRD compliance means going through hundreds of data points across multiple documents and filling them in manually. This agent reads through the documents and fills the CSRD index automatically. What used to take days of manual cross-referencing takes hours of AI processing instead.",
         thinking: "The CSRD Index agent reads company documents and automatically populates CSRD disclosure data points based on the European Sustainability Reporting Standards checklist. Processes uploaded documents asynchronously, with indexed disclosures ready in 4 to 5 hours. Output is exportable. Designed to eliminate the manual document-to-report translation that makes CSRD compliance so time-intensive.",
       },
