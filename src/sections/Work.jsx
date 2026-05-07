@@ -40,7 +40,7 @@ export default function Work() {
               onClick={(e) => handleCardClick(e, p.slug)}
             >
               <div className="work-card-image" aria-hidden="true">
-                {p.cover && <img src={p.cover} alt="" />}
+                {p.cover && <img src={p.cover.replace(/ /g, '%20')} alt="" />}
               </div>
               <div className="work-card-inner">
                 <p className="work-card-title" data-design-spec={TITLE_SPEC}>{p.title}</p>
