@@ -74,6 +74,7 @@ export const projects = [
   {
     slug: 'greenskills',
     title: 'ESG Agents | Greenskills',
+    cover: '/Greenskills cover.png',
     company: 'Carboledger',
     role: 'Product Designer',
     year: '2024–Present',
